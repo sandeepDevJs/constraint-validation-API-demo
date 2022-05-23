@@ -100,10 +100,17 @@ input[type="radio"]:checked+label:before {
     content: "🌮";
 }
 
-input:invalid {
-    border-color: red;
-}
-
 input:focus {
     border-width: 3px;
+}
+
+button[type=submit]{
+    margin-top: 18px;
+    width: 100%;
+    border-radius: var(--border-radius);
+    padding: 8px 6px;
+    background-color: var(--primary-color);
+    text-transform: uppercase;
+    border: none;
+    font-weight: bold;
 }
