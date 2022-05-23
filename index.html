@@ -27,63 +27,66 @@
         </header>
 
         <section>
-            <form action="">
-                <div>
-                    <div class="form-control-container">
-                        <label for="name">Enter Name</label>
-                        <input id="name" name="name" type="text" required />
-                        <p id="p-name"></p>
-                    </div>
+            <form onsubmit="handleSubmit">
+                <div class="controls">
+                    <div>
+                        <div class="form-control-container">
+                            <label for="name">Enter Name</label>
+                            <input id="name" name="name" type="text" required />
+                            <p id="p-name"></p>
+                        </div>
 
-                    <div class="form-control-container">
-                        <label for="email">Enter Email</label>
-                        <input id="email" type="email" name="email" required />
-                        <p id="p-email"></p>
-                    </div>
+                        <div class="form-control-container">
+                            <label for="email">Enter Email</label>
+                            <input id="email" type="email" name="email" required />
+                            <p id="p-email"></p>
+                        </div>
 
-                    <div class="form-control-container">
-                        <label for="username">Enter Username</label>
-                        <input id="username" type="text" name="username" required />
-                        <p id="p-username"></p>
-                    </div>
+                        <div class="form-control-container">
+                            <label for="username">Enter Username</label>
+                            <input id="username" type="text" name="username" required />
+                            <p id="p-username"></p>
+                        </div>
 
-                    <div class="form-control-container">
-                        <label for="phone">Enter Phone</label>
-                        <input id="phone" type="tel" name="phone number" maxlength="10" minlength="10" required />
-                        <p id="p-phone"></p>
+                        <div class="form-control-container">
+                            <label for="phone">Enter Phone</label>
+                            <input id="phone" type="tel" name="phone number" maxlength="10" minlength="10" required />
+                            <p id="p-phone"></p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-control-container">
+                            <label for="age">Enter Age</label>
+                            <input id="age" type="number" name="age" max="70" min="18" required />
+                            <p id="p-age"></p>
+                        </div>
+
+                        <div class="form-control-container">
+                            <label for="graduation">Graduation</label>
+                            <select name="graduation" name="graduation" id="graduation">
+                                <option disabled value> -- select an option -- </option>
+                                <option>B TECH</option>
+                                <option>BSC</option>
+                                <option>Other</option>
+                            </select>
+                            <p id="p-graduation"></p>
+                        </div>
+
+                        <div class="form-control-container">
+                            <label>Are you married?</label>
+                            <div>
+                                <input type="radio" id="is_married_yes" name="is_married" />
+                                <label for="is_married_yes">Yes</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="is_married_no" name="is_married"/>
+                                <label for="is_married_no">No</label>
+                            </div>
+                            <p id="p-is_married"></p>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <div class="form-control-container">
-                        <label for="age">Enter Age</label>
-                        <input id="age" type="number" name="age" max="70" min="18" required />
-                        <p id="p-age"></p>
-                    </div>
-
-                    <div class="form-control-container">
-                        <label for="graduation">Graduation</label>
-                        <select name="graduation" name="graduation" id="graduation">
-                            <option disabled value> -- select an option -- </option>
-                            <option>B TECH</option>
-                            <option>BSC</option>
-                            <option>Other</option>
-                        </select>
-                        <p id="p-graduation"></p>
-                    </div>
-
-                    <div class="form-control-container">
-                        <label>Are you married?</label>
-                        <div>
-                            <input type="radio" id="is_married_yes" name="is_married" />
-                            <label for="is_married_yes">Yes</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="is_married_no" name="is_married" />
-                            <label for="is_married_no">No</label>
-                        </div>
-                        <p id="p-is_married"></p>
-                    </div>
-                </div>
+                <button type="submit">submit</button>
             </form>
         </section>
 

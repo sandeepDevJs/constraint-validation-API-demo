@@ -5,18 +5,21 @@ const usernameInput = document.querySelector("#username");
 const phoneInput = document.querySelector("#phone");
 const ageInput = document.querySelector("#age");
 const graduationInput = document.querySelector("#graduation");
-const isMarriedInput = document.querySelectorAll("[name=is_married]");
+const form = document.querySelector("form");
 
-
+//vars
+const elementsArr = [nameInput, emailInput, usernameInput, phoneInput, ageInput, graduationInput];
 const getErrElement = (id) => document.querySelector(`#p-${id}`);
 
-const elementsArr = [nameInput, emailInput, usernameInput, phoneInput, ageInput, graduationInput];
-
+//attaching events
 elementsArr.forEach(e => {
     e.addEventListener('input', validateInputs);
     e.addEventListener('blur', validateInputs)
 });
 
+form.addEventListener('submit', handleSubmit);
+
+//handling events
 function validateInputs(e) {
     const validityState = this.validity;
     const errElement = getErrElement(this.id);
@@ -50,4 +53,17 @@ function validateInputs(e) {
 
     errElement.textContent = message;
 
+}
+
+function handleSubmit(e) {
+    e.preventDefault();
+
+    const isMarriedInput = document.querySelector("[name=is_married]:checked");
+    const errElement = getErrElement("is_married");
+
+    if(!isMarriedInput){
+        errElement.textContent = "Required!";
+    }else{
+        errElement.textContent="";
+    }
 }
